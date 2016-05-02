@@ -13,7 +13,11 @@ RUN apt-get install -y curl
 RUN mkdir /opt/files
 
 # get audio logo
-RUN curl https://dl.dropboxusercontent.com/u/5710883/audio_logo.mp3 > /opt/files/audio_logo.mp3
+RUN curl https://dl.dropboxusercontent.com/u/5710883/noisefarm/audio_logo_1.mp3 > /opt/files/audio_logo_1.mp3
+RUN curl https://dl.dropboxusercontent.com/u/5710883/noisefarm/audio_logo_2.mp3 > /opt/files/audio_logo_2.mp3
+RUN curl https://dl.dropboxusercontent.com/u/5710883/noisefarm/audio_logo_3.mp3 > /opt/files/audio_logo_3.mp3
+RUN curl https://dl.dropboxusercontent.com/u/5710883/noisefarm/audio_logo_4.mp3 > /opt/files/audio_logo_4.mp3
+RUN curl https://dl.dropboxusercontent.com/u/5710883/noisefarm/audio_logo_5.mp3 > /opt/files/audio_logo_5.mp3
 RUN ls -la
 
 # change permissions
