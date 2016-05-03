@@ -23,4 +23,8 @@ RUN ls -la
 # change permissions
 RUN chmod a+wx /opt
 RUN chmod a+wx /opt/files
-RUN chmod a+wx /opt/files/audio_logo.mp3
+RUN chmod a+wx /opt/files/audio_logo_1.mp3
+RUN chmod a+wx /opt/files/audio_logo_2.mp3
+RUN chmod a+wx /opt/files/audio_logo_3.mp3
+RUN chmod a+wx /opt/files/audio_logo_4.mp3
+RUN chmod a+wx /opt/files/audio_logo_5.mp3
