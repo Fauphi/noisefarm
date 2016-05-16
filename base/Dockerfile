@@ -45,3 +45,5 @@ RUN ln -s -f /usr/local/share/phantomjs-${PHANTOMJS_VERSION}-linux-${ARCH}/bin/p
 RUN ln -s -f /usr/local/share/phantomjs-${PHANTOMJS_VERSION}-linux-${ARCH}/bin/phantomjs /usr/bin/phantomjs
 
 RUN rm $PHANTOMJS_TAR_FILE
+
+RUN phantomsjs --version
