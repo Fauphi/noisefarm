@@ -28,18 +28,3 @@ RUN chmod a+wx /opt/files/audio_logo_2.mp3
 RUN chmod a+wx /opt/files/audio_logo_3.mp3
 RUN chmod a+wx /opt/files/audio_logo_4.mp3
 RUN chmod a+wx /opt/files/audio_logo_5.mp3
-
-# Install PhantomJS
-RUN set -e
-RUN apt-get -y install libfreetype6 libfreetype6-dev fontconfig
-
-RUN cd /usr/local/share/
-RUN curl -L -O https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-2.1.1-linux-x86_64.tar.bz2
-RUN tar xjf phantomjs-2.1.1-linux-x86_64.tar.bz2
-RUN ln -s -f /usr/local/share/phantomjs-2.1.1-linux-x86_64/bin/phantomjs /usr/local/share/phantomjs
-RUN ln -s -f /usr/local/share/phantomjs-2.1.1-linux-x86_64/bin/phantomjs /usr/local/bin/phantomjs
-RUN ln -s -f /usr/local/share/phantomjs-2.1.1-linux-x86_64/bin/phantomjs /usr/bin/phantomjs
-
-RUN rm phantomjs-2.1.1-linux-x86_64.tar.bz2
-
-RUN phantomsjs --version

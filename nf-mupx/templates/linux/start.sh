@@ -42,6 +42,7 @@ else
     --name=$APPNAME \
     atticstudio/noisefarm-meteor-sox:base3
 #    meteorhacks/meteord:base
+  docker exec -it noisefarm-live sh -c 'set -e && cd /usr/local/share/ && curl -L -O https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-2.1.1-linux-x86_64.tar.bz2 && tar xjf phantomjs-2.1.1-linux-x86_64.tar.bz2 && ln -s -f /usr/local/share/phantomjs-2.1.1-linux-x86_64/bin/phantomjs /usr/local/share/phantomjs && ln -s -f /usr/local/share/phantomjs-2.1.1-linux-x86_64/bin/phantomjs /usr/local/bin/phantomjs && ln -s -f /usr/local/share/phantomjs-2.1.1-linux-x86_64/bin/phantomjs /usr/bin/phantomjs && rm phantomjs-2.1.1-linux-x86_64.tar.bz2 && phantomjs --version'
 fi
 
 <% if(typeof sslConfig === "object")  { %>
