@@ -33,17 +33,13 @@ RUN chmod a+wx /opt/files/audio_logo_5.mp3
 RUN set -e
 RUN apt-get -y install libfreetype6 libfreetype6-dev fontconfig
 
-ENV ARCH=x86_64
-ENV PHANTOMJS_VERSION=2.1.1
-ENV PHANTOMJS_TAR_FILE=phantomjs-${PHANTOMJS_VERSION}-linux-${ARCH}.tar.bz2
-
 RUN cd /usr/local/share/
-RUN curl -L -O https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-${PHANTOMJS_VERSION}-linux-${ARCH}.tar.bz2
-RUN tar xjf $PHANTOMJS_TAR_FILE
-RUN ln -s -f /usr/local/share/phantomjs-${PHANTOMJS_VERSION}-linux-${ARCH}/bin/phantomjs /usr/local/share/phantomjs
-RUN ln -s -f /usr/local/share/phantomjs-${PHANTOMJS_VERSION}-linux-${ARCH}/bin/phantomjs /usr/local/bin/phantomjs
-RUN ln -s -f /usr/local/share/phantomjs-${PHANTOMJS_VERSION}-linux-${ARCH}/bin/phantomjs /usr/bin/phantomjs
+RUN curl -L -O https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-2.1.1-linux-x86_64.tar.bz2
+RUN tar xjf phantomjs-2.1.1-linux-x86_64.tar.bz2
+RUN ln -s -f /usr/local/share/phantomjs-2.1.1-linux-x86_64/bin/phantomjs /usr/local/share/phantomjs
+RUN ln -s -f /usr/local/share/phantomjs-2.1.1-linux-x86_64/bin/phantomjs /usr/local/bin/phantomjs
+RUN ln -s -f /usr/local/share/phantomjs-2.1.1-linux-x86_64/bin/phantomjs /usr/bin/phantomjs
 
-RUN rm $PHANTOMJS_TAR_FILE
+RUN rm phantomjs-2.1.1-linux-x86_64.tar.bz2
 
 RUN phantomsjs --version
