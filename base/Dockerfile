@@ -4,6 +4,9 @@ FROM meteorhacks/meteord:base
 MAINTAINER Philipp Fauser <philipp@attic-studio.net>
 RUN apt-get update 
 
+# install taglib
+RUN apt-get install -y libtag1-dev
+
 # install sox and mp3 codec
 RUN apt-get install -y sox
 RUN apt-get install -y libsox-fmt-mp3
