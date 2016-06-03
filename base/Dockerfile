@@ -4,8 +4,9 @@ FROM meteorhacks/meteord:base
 MAINTAINER Philipp Fauser <philipp@attic-studio.net>
 RUN apt-get update 
 
-# install taglib
-RUN apt-get install -y libtag1-dev
+# install ffmpeg
+RUN apt-get install -y libav-tools
+RUN ln -s /usr/bin/avconv /usr/bin/ffmpeg
 
 # install sox and mp3 codec
 RUN apt-get install -y sox

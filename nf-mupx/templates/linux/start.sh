@@ -29,7 +29,7 @@ if [ "$USE_LOCAL_MONGO" == "1" ]; then
     --hostname="$HOSTNAME-$APPNAME" \
     --env=MONGO_URL=mongodb://mongodb:27017/$APPNAME \
     --name=$APPNAME \
-    atticstudio/noisefarm-meteor-sox:base6
+    atticstudio/noisefarm-meteor-sox:base7
 #    meteorhacks/meteord:base
 else
   docker run \
@@ -40,7 +40,7 @@ else
     --hostname="$HOSTNAME-$APPNAME" \
     --env-file=$ENV_FILE \
     --name=$APPNAME \
-    atticstudio/noisefarm-meteor-sox:base6
+    atticstudio/noisefarm-meteor-sox:base7
 #    meteorhacks/meteord:base
 fi
 
