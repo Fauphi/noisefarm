@@ -34,6 +34,6 @@ RUN chmod a+wx /opt/files/audio_logo_4.mp3
 RUN chmod a+wx /opt/files/audio_logo_5.mp3
 
 # install ID3 tag python lib
-curl https://bootstrap.pypa.io/get-pip.py > get-pip.py
-python get-pip.py
-pip install mutagen
+RUN curl https://bootstrap.pypa.io/get-pip.py > get-pip.py
+RUN python get-pip.py
+RUN pip install mutagen
