@@ -1,6 +1,6 @@
 {
   "name": "nf-mupx",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Production Quality Meteor Deployments",
   "dependencies": {
     "async": "^0.9.0",
