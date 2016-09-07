@@ -2,7 +2,13 @@
 #FROM ubuntu:14.04
 FROM meteorhacks/meteord:base
 MAINTAINER Philipp Fauser <philipp@attic-studio.net>
-RUN apt-get update 
+RUN apt-get update
+
+COPY scripts/install_binbuild_tools.sh $METEORD_DIR/install_binbuild_tools.sh
+COPY scripts/rebuild_npm_modules.sh $METEORD_DIR/rebuild_npm_modules.sh
+
+RUN bash $METEORD_DIR/install_binbuild_tools.sh
+RUN bash $METEORD_DIR/rebuild_npm_modules.sh
 
 # install ffmpeg
 RUN apt-get install -y libav-tools
