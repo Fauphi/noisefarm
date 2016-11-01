@@ -18,21 +18,13 @@ RUN apt-get install -y curl
 RUN mkdir /opt/files
 
 # get audio logo
-RUN curl https://dl.dropboxusercontent.com/u/5710883/noisefarm/audio_logo_1.mp3 > /opt/files/audio_logo_1.mp3
-RUN curl https://dl.dropboxusercontent.com/u/5710883/noisefarm/audio_logo_2.mp3 > /opt/files/audio_logo_2.mp3
-RUN curl https://dl.dropboxusercontent.com/u/5710883/noisefarm/audio_logo_3.mp3 > /opt/files/audio_logo_3.mp3
-RUN curl https://dl.dropboxusercontent.com/u/5710883/noisefarm/audio_logo_4.mp3 > /opt/files/audio_logo_4.mp3
-RUN curl https://dl.dropboxusercontent.com/u/5710883/noisefarm/audio_logo_5.mp3 > /opt/files/audio_logo_5.mp3
+RUN curl https://dl.dropboxusercontent.com/u/5710883/noisefarm/logo.wav > /opt/files/logo.wav
 RUN ls -la
 
 # change permissions
 RUN chmod a+wx /opt
 RUN chmod a+wx /opt/files
-RUN chmod a+wx /opt/files/audio_logo_1.mp3
-RUN chmod a+wx /opt/files/audio_logo_2.mp3
-RUN chmod a+wx /opt/files/audio_logo_3.mp3
-RUN chmod a+wx /opt/files/audio_logo_4.mp3
-RUN chmod a+wx /opt/files/audio_logo_5.mp3
+RUN chmod a+wx /opt/files/logo.wav
 
 # install ID3 tag python lib
 RUN apt-get install -y python-pip
