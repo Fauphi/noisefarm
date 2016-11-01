@@ -18,13 +18,13 @@ RUN apt-get install -y curl
 RUN mkdir /opt/files
 
 # get audio logo
-RUN curl https://dl.dropboxusercontent.com/u/5710883/noisefarm/logo.wav > /opt/files/logo.wav
+RUN curl https://dl.dropboxusercontent.com/u/5710883/noisefarm/logo.mp3 > /opt/files/logo.mp3
 RUN ls -la
 
 # change permissions
 RUN chmod a+wx /opt
 RUN chmod a+wx /opt/files
-RUN chmod a+wx /opt/files/logo.wav
+RUN chmod a+wx /opt/files/logo.mp3
 
 # install ID3 tag python lib
 RUN apt-get install -y python-pip
