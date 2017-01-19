@@ -1,7 +1,8 @@
 # SOX audio tool
 #FROM ubuntu:14.04
-FROM meteorhacks/meteord:base
+#FROM meteorhacks/meteord:base
 #FROM kadirahq/meteord:base
+FROM abernix/meteord:base
 MAINTAINER Philipp Fauser <philipp@attic-studio.net>
 RUN apt-get update
 
