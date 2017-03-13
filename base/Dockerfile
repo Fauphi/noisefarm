@@ -19,7 +19,7 @@ RUN apt-get install -y curl
 RUN mkdir /opt/files
 
 # get audio logo
-RUN curl https://dl.dropboxusercontent.com/u/5710883/noisefarm/logo.mp3 > /opt/files/logo.mp3
+RUN curl http://files.noisefarm.net/files/logo.mp3 > /opt/files/logo.mp3
 RUN ls -la
 
 # change permissions
